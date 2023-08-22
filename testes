@@ -1,0 +1,197 @@
+package exercicios;
+import java.util.Scanner;
+
+
+public class testes {
+	public class testeex02 {
+	    private static Scanner scanner;
+	    static {
+	        scanner = new Scanner(System.in);
+	    }
+	    
+
+	    public static void main(String[] args) {
+	        int opcao = -1;
+
+	        while(opcao != 0) {
+	            opcao = solicitaInt("Digite um número:\n(1) Para exercicio 1\n(2) Para exercicio 2\n(3) Para exercicio 3\n(4) Para exercicio 4\n");
+	            switch (opcao) {
+	                case 1:
+	                    ex1();
+	                    break;
+	                case 2:
+	                    ex2();
+	                    break;
+	                case 3:
+	                    ex3();
+	                    break;
+	                case 4:
+	                	ex4();
+	                	break;
+	            }
+	        }
+
+	    }
+
+	    private static void ex1() {
+	        System.out.print("Digite o primeiro valor: ");
+	        double valor1 = scanner.nextDouble();
+	        System.out.print("Digite o segundo valor: ");
+	        double valor2 = scanner.nextDouble();
+	        double produto = valor1 * valor2;
+	        System.out.println("\nO A multiplicação entre " + valor1 + " e " + valor2 + " é: " + produto + "\n");
+	    }
+
+	    private static void ex2() {
+	        String i1 = "God Of War Ragnarok";
+	        String i2 = "Hand-Grip";
+	        String i3 = "Caderno 500 Folhas";
+	        String i4 = "Garrafa de água 500ml";
+	        String i5 = "Hamburguer";
+	        String i6 = "Monitor Gamer 144hz";
+	        String i7 = "Celular Samsung S23";
+	        String i8 = "Maçaneta porta";
+	        String i9 = "Copo de vidro";
+	        String i10 = "Quadro anime MDF";
+	        String catalogo = "Aqui vai a lista de produtos que nós temos\n\n      Itens                    Preços\n__________________________________________\n|1 - God Of War Ragnarok    |  RS99,90    |\n|2 - Hand-Grip              |  R$9,90     |\n|3 - Caderno 500 Folhas     |  R$25,00    |\n|4 - Garrafa de água 500ml  |  R$4,99     |\n|5 - Hamburguer             |  R$5,50     |\n|6 - Monitor Gamer 144hz    |  R$1.245,50 |\n|7 - Celular Samsung S23    |  R$5.350,00 |\n|8 - Maçaneta porta         |  R$3,50     |\n|9 - Copo de vidro          |  R$2,00     |\n|10 - Quadro anime MDF      |  R$60,00    |\n__________________________________________|\n";
+	        Scanner nome = new Scanner(System.in);
+	        System.out.println("Digite seu nome: ");
+	        String nm = nome.next();
+	        System.out.println(catalogo);
+	        Scanner escolha = new Scanner(System.in);
+	        System.out.println("Escolha um dos itens pelo número(1 à 10): ");
+	        int c1 = escolha.nextInt();
+	        double valor;
+	        Scanner qtd;
+	        int uni;
+	        if (c1 == 1) {
+	            System.out.println("Você selecionou o item " + i1 + " no valor de R$99,90");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = 99.9 * (double)uni;
+	            new Scanner(System.in);
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 2) {
+	            System.out.println("Você selecionou o item " + i2 + " no valor de R$9,90");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = 9.9 * (double)uni;
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 3) {
+	            System.out.println("Você selecionou o item " + i3 + " no valor de R$25,00");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = (double)(25 * uni);
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 4) {
+	            System.out.println("Você selecionou o item " + i4 + " no valor de R$4,99");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = 4.99 * (double)uni;
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 5) {
+	            System.out.println("Você selecionou o item " + i5 + " no valor de R$5,50");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = 5.5 * (double)uni;
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 6) {
+	            System.out.println("Você selecionou o item " + i6 + " no valor de R1.245,60");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = 1245.5 * (double)uni;
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 7) {
+	            System.out.println("Você selecionou o item " + i7 + " no valor de R$5.350,00");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = (double)(5350 * uni);
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 8) {
+	            System.out.println("Você selecionou o item " + i8 + " no valor de R$3,50");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = 3.5 * (double)uni;
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 9) {
+	            System.out.println("Você selecionou o item " + i9 + " no valor de R$2,00");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = (double)(2 * uni);
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else if (c1 == 10) {
+	            System.out.println("Você selecionou o item " + i10 + " no valor de R$60,00");
+	            qtd = new Scanner(System.in);
+	            System.out.println("Você vai comprar quantas unidades: ");
+	            uni = qtd.nextInt();
+	            valor = (double)(60 * uni);
+	            System.out.println("Obrigado " + nm);
+	            System.out.printf("O valor total é R$%.2f", valor);
+	        } else {
+	            System.out.println("DIGITE UM NÚMERO VÁLIDO");
+	        }
+
+	        System.out.println("\n");
+	    }
+
+	    private static void ex3() {
+	        System.out.print("Digite o valor do produto comprado: R$");
+	        double ValorProduto = scanner.nextDouble();
+	        System.out.print("Digite a porcentagem de revenda(%): ");
+	        double PorcentagemRevenda = scanner.nextDouble();
+	        Double ValorTotal = ValorProduto + ValorProduto * (PorcentagemRevenda / 100.0);
+	        System.out.printf("Valor pago: R$%.2f %n", ValorProduto);
+	        System.out.printf("Valor de revenda: R$%.2f", ValorTotal);
+	    }
+	    
+	    private static void ex4() {
+	    	System.out.print("Digite o valor do produto: ");
+	        double valorProduto = scanner.nextDouble();
+
+	        System.out.print("Digite a quantidade do produto: ");
+	        int quantidade = scanner.nextInt();
+
+	        double valorTotal = valorProduto * quantidade;
+	        double desconto = valorTotal * 0.05;
+	        double valorComDesconto = valorTotal - desconto;
+
+	        System.out.println("\nResumo da Compra:");
+	        System.out.println("Valor do produto: R$" + valorProduto);
+	        System.out.println("Quantidade: " + quantidade);
+	        System.out.println("Valor total: R$" + valorTotal);
+	        System.out.println("Desconto (5%): R$" + desconto);
+	        System.out.println("Valor com desconto: R$" + valorComDesconto);
+	    }
+	
+
+	    private static int solicitaInt(String msg) {
+	        while(true) {
+	            try {
+	                System.out.println(msg);
+	                return scanner.nextInt();
+	            } catch (Exception var2) {
+	                scanner.nextLine();
+	                System.out.println("\nValor ditado é inválido");
+	            }
+	        }
+	    }
+	}
+}
